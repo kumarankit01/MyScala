@@ -2,7 +2,7 @@ object Equality extends App {
 
   case class User(name: String)
 
-  trait Equal[T] {
+  trait Equal[T]{
     def apply(a: T, b: T): Boolean
   }
 
@@ -24,6 +24,10 @@ object Equality extends App {
   }
 
   println(User("A") !== User("B"))
+
+
+  val st = implicitly
+  //User("A") === 43 TYPE SAFE
   /*
   userA.===(userB)
   user donn't have === so compiler will search if there is any implicit class with === method
