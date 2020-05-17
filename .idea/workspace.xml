@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3338fde8-5b50-4f87-a412-d180196e4b11" name="Default Changelist" comment="" />
+    <list default="true" id="3338fde8-5b50-4f87-a412-d180196e4b11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/BitManipulation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Equality.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/FoldLeft.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$Node$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$Node$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft$delayedInit$body.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/FoldLeft.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +40,18 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1bOphlVzk12m8VbttyCOLH3j0GQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sttp" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -44,7 +64,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FoldLeft">
+  <component name="RunManager" selected="Application.Equality">
+    <configuration name="Equality" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Equality" />
+      <module name="Myscala" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FoldLeft" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="FoldLeft" />
       <module name="Myscala" />
@@ -71,6 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Equality" />
         <item itemvalue="Application.FoldLeft" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Scala Console.Scala Console" />
@@ -104,6 +132,7 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$" value="3177026235095" />
         <entry key="$PROJECT_DIR$/build.sbt" value="90440734" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="2620759781" />
       </map>
@@ -121,5 +150,18 @@
       <updated>1588513115212</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
