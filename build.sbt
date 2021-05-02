@@ -1,4 +1,4 @@
-name := "MyScala"
+name := "Myscala"
 
 version := "0.1"
 
