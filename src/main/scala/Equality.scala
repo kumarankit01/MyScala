@@ -26,7 +26,7 @@ object Equality extends App {
   println(User("A") !== User("B"))
 
 
-  val st = implicitly
+  //val st = implicitly
   //User("A") === 43 TYPE SAFE
   /*
   userA.===(userB)
