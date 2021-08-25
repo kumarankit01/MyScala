@@ -1,4 +1,4 @@
-package com.interviewBit.array
+package practice.array
 
 class Solution {
   def coverPoints(A: Array[Int], B: Array[Int]): Int = {

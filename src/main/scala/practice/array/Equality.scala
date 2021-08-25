@@ -1,8 +1,10 @@
+package practice.array
+
 object Equality extends App {
 
   case class User(name: String)
 
-  trait Equal[T]{
+  trait Equal[T] {
     def apply(a: T, b: T): Boolean
   }
 

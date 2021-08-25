@@ -1,4 +1,4 @@
-package com.leetcode
+package com.leetcode.random
 
 object FindAndReplace extends App {
 

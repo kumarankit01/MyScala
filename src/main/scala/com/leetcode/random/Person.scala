@@ -1,4 +1,4 @@
-package com.leetcode
+package com.leetcode.random
 
 object Person extends App {
 
@@ -36,8 +36,9 @@ object Person extends App {
     def *(l: List[Int]) = {
       def aux(n: Int): List[Int] = {
         if (n <= 0) l
-        else aux(n-1) ++ l
+        else aux(n - 1) ++ l
       }
+
       aux(v)
     }
   }
@@ -50,6 +51,3 @@ object Person extends App {
   println("5".asInt)
   println(5.*(List(1, 2)))
 }
-
-
-

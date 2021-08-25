@@ -1,4 +1,4 @@
-package com.leetcode
+package com.leetcode.random
 
 object Sudoku extends App {
   def solveSudoku(board: Array[Array[Char]]): Unit = {

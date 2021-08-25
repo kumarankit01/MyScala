@@ -1,4 +1,4 @@
-package com.leetcode
+package com.leetcode.random
 
 object Solution extends App {
 
@@ -9,6 +9,7 @@ object Solution extends App {
       rev2(a / 10, acc + Math.abs(num))
     }
   }
+
   def reverse(x: Int): Int = {
     val s = rev2(x, "")
     val abs = if (s == "" || s.toLong > Integer.MAX_VALUE || s.toLong < Integer.MIN_VALUE) {
@@ -25,5 +26,3 @@ object Solution extends App {
 
   println(reverse(-10))
 }
-
-
