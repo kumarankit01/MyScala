@@ -2,9 +2,9 @@ package com.leetcode.easy
 
 object TicTacToe extends App {
   def tictactoe(moves: Array[Array[Int]]): String = {
-    val arr = Array.ofDim[String](3, 3)
+    val arr = Array.ofDim[String](3, 3) //O(n*n)
     val played = moves.length
-    // Fill board
+    // Fill board O(n)
     for (i <- 0 until played by 2) {
       val r = moves(i)(0)
       val c = moves(i)(1)
@@ -18,14 +18,14 @@ object TicTacToe extends App {
 
     def check: Option[String] = {
       var winner: Option[String] = None
-      //check row & col
+      //check row & col O(n)
       for (i <- 0 to 2) {
         if (winner.isEmpty && arr(i)(0) == arr(i)(1) && arr(i)(1) == arr(i)(2) && arr(i)(2) != null)
           winner = Some(arr(i)(0))
         if (winner.isEmpty && arr(0)(i) == arr(1)(i) && arr(1)(i) == arr(2)(i) && arr(2)(i) != null)
           winner = Some(arr(0)(i))
       }
-      //check diagonal
+      //check diagonal  O(1)
       if (winner.isEmpty && arr(0)(0) == arr(1)(1) && arr(1)(1) == arr(2)(2) && arr(1)(1) != null)
         winner = Some(arr(1)(1))
       if (winner.isEmpty && arr(0)(2) == arr(1)(1) && arr(1)(1) == arr(2)(0) && arr(1)(1) != null)
