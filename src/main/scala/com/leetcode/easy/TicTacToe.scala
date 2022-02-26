@@ -41,11 +41,45 @@ object TicTacToe extends App {
     }
   }
 
+  def tictactoeAdvance(moves: Array[Array[Int]]): String = {
+    var row, col = Array.fill(3)(0)
+    var diagnol = 0
+    var antiDiagnol = 0
+    var winner: Option[String] = None
+    var player = 1
+    // Fill board O(n)
+    for (i <- 0 until moves.length) {
+      if (winner.isEmpty) {
+        val r = moves(i)(0)
+        val c = moves(i)(1)
+        row(r) += player
+        col(c) += player
+        if (r == c) // update diagnol 00,11,22
+          diagnol += player
+        if (r + c == 2) //20,11,02
+          antiDiagnol += player
+        //check if anyone wins
+        if (Math.abs(row(r)) == 3 || Math.abs(col(c)) == 3 || Math.abs(diagnol) == 3 || Math.abs(antiDiagnol) == 3)
+          if (player == 1)
+            winner = Some("A")
+          else winner = Some("B")
+        player = player * -1
+      }
+    }
+    if (winner.isDefined) winner.get
+    else if (moves.length < 9) "Pending"
+    else "Draw"
+
+  }
+
   val test = Array.ofDim[Int](2, 2)
-  println(tictactoe(Array(Array(0, 0), Array(1, 0), Array(1, 1), Array(1, 2), Array(2, 2))))
-  println(tictactoe(Array(Array(0, 0), Array(1, 1), Array(0, 1), Array(0, 2), Array(1, 0), Array(2, 0))))
-  println(tictactoe(Array(Array(0, 0), Array(1, 1), Array(0, 1), Array(0, 2), Array(1, 0))))
-  println(tictactoe(Array(Array(0, 0), Array(1, 1), Array(2, 0), Array(1, 0), Array(1, 2), Array(2, 1), Array(0, 1), Array(0, 2), Array(2, 2))))
-  println(tictactoe(Array(Array(1, 2), Array(2, 1), Array(0, 0), Array(0, 1), Array(2, 0), Array(0, 2), Array(2, 2), Array(1, 1))))
-  println(tictactoe(Array(Array(0, 0))))
+  /*  println(tictactoeAdvance(Array(Array(0, 0), Array(1, 0), Array(1, 1), Array(1, 2), Array(2, 2))))
+    println(tictactoeAdvance(Array(Array(0, 0), Array(1, 1), Array(0, 1), Array(0, 2), Array(1, 0), Array(2, 0))))
+    println(tictactoeAdvance(Array(Array(0, 0), Array(1, 1), Array(0, 1), Array(0, 2), Array(1, 0))))
+    println(tictactoeAdvance(Array(Array(0, 0), Array(1, 1), Array(2, 0), Array(1, 0), Array(1, 2), Array(2, 1), Array(0, 1), Array(0, 2), Array(2, 2))))
+    println(tictactoeAdvance(Array(Array(1, 2), Array(2, 1), Array(0, 0), Array(0, 1), Array(2, 0), Array(0, 2), Array(2, 2), Array(1, 1))))
+    println(tictactoeAdvance(Array(Array(0, 0))))*/
+  //[[2,0],[1,1],[0,2],[2,1],[1,2],[1,0],[0,0],[0,1]]
+  println(tictactoeAdvance(Array(Array(2, 0), Array(1, 1), Array(0, 2), Array(2, 1), Array(1, 2), Array(1, 0), Array(0, 0), Array(0, 1))))
+
 }
