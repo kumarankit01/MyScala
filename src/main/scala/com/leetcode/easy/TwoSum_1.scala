@@ -15,8 +15,8 @@ object TwoSum_1 extends App {
   }
 
   def twoSumModified(nums: Array[Int], target: Int): Array[Int] = {
-    val withIndex = nums.zipWithIndex
-    val hashmap = withIndex.toMap
+    val withIndex: Array[(Int, Int)] = nums.zipWithIndex
+    val hashmap: Map[Int, Int] = withIndex.toMap
     withIndex.collectFirst {
       case (v, i) if hashmap.get(target - v).exists(_ != i) => Array(i, hashmap(target - v))
     }.getOrElse(Array.empty)
