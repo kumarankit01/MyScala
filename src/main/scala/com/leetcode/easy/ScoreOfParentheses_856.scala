@@ -10,12 +10,11 @@ object ScoreOfParentheses_856 extends App {
         case '(' => stack.push("(")
         case ')' => {
           val allNumbers = stack.popWhile(s => s != "(")
-          if(allNumbers.isEmpty) {
+          if (allNumbers.isEmpty) {
             stack.pop()
             stack.push(1.toString)
           }
-          else
-          {
+          else {
             val sum = allNumbers.map(_.toInt).sum
             stack.pop()
             stack.push((sum * 2).toString)
@@ -28,20 +27,27 @@ object ScoreOfParentheses_856 extends App {
     result
   }
 
-  println(scoreOfParentheses("()"))
+  def scoreOfParenthesesNew(s: String): Int = s.foldLeft(List[Int](0)) {
+    case (stack, '(') => 0 :: stack
+    case (0 :: next :: tail, ')') => (1 + next) :: tail
+    case (head :: next :: tail, ')') => (head * 2 + next) :: tail
+    case _ => ??? // can only happen if input is non-balanced.
+  }.head
+
+  println(scoreOfParenthesesNew("()"))
   println(scoreOfParentheses("()()"))
   println(scoreOfParentheses("(()()())"))
   println(scoreOfParentheses("((()))(())"))
-  println(scoreOfParentheses("(((())))") )
+  println(scoreOfParentheses("(((())))"))
   println(scoreOfParentheses("((()()))(())"))
 }
 
 /**
- *   scoreOfParentheses("()") //1
-  scoreOfParentheses("()()") //1 + 1
-  scoreOfParentheses("(()()())") //1 + 1
-  scoreOfParentheses("(()())") //1 + 1 //  ( 1 ,  1 ) * 2
-  scoreOfParentheses("((()))") //2*(2 * 1)
-  scoreOfParentheses("((()))(())") //2 * (2 * (1)) + 2 * 1
-  scoreOfParentheses("((()()))(())") //2 * (2 * (1 +1 )) + 2 * 1 //
+ * scoreOfParentheses("()") //1
+ * scoreOfParentheses("()()") //1 + 1
+ * scoreOfParentheses("(()()())") //1 + 1
+ * scoreOfParentheses("(()())") //1 + 1 //  ( 1 ,  1 ) * 2
+ * scoreOfParentheses("((()))") //2*(2 * 1)
+ * scoreOfParentheses("((()))(())") //2 * (2 * (1)) + 2 * 1
+ * scoreOfParentheses("((()()))(())") //2 * (2 * (1 +1 )) + 2 * 1 //
  */
