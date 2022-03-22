@@ -1,5 +1,7 @@
 package com.leetcode.easy
 
+import scala.collection.mutable.ListBuffer
+
 object DiameterOfBinaryTree_543 extends App {
   var max = 0
 
@@ -18,11 +20,26 @@ object DiameterOfBinaryTree_543 extends App {
     }
   }
 
+  def preorderTraversal(root: TreeNode): List[Int] = {
+    val acc = ListBuffer[Int]()
+
+    def Inorder(root: TreeNode): Unit = {
+      if (root != null) {
+        Inorder(root.left)
+        Inorder(root.right)
+        acc += root.value
+      }
+    }
+
+    Inorder(root)
+    acc.toList
+  }
+
   /**
    * follow up, print path
    */
 
-  println(diameterOfBinaryTreeNew(TreeNode(1)))
+/*  println(diameterOfBinaryTreeNew(TreeNode(1)))
   println(diameterOfBinaryTreeNew(TreeNode(1, null, TreeNode(2))))
   println(diameterOfBinaryTreeNew(TreeNode(1, TreeNode(2), null)))
   println(diameterOfBinaryTreeNew(TreeNode(1,
@@ -33,5 +50,7 @@ object DiameterOfBinaryTree_543 extends App {
       TreeNode(5,
         TreeNode(6, TreeNode(8), TreeNode(9)),
         TreeNode(7))),
-    TreeNode(3))))
+    TreeNode(3))))*/
+
+  println(preorderTraversal(TreeNode(1,null,  TreeNode(2))))
 }
