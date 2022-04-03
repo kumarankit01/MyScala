@@ -17,5 +17,6 @@ object VersionControl extends App {
     }
     low
   }
+
   println(firstBadVersion(Integer.MAX_VALUE))
 }
