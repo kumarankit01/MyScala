@@ -1,9 +1,5 @@
 package com.leetcode.easy
 
-import scala.collection.mutable.Seq
-import scala.collection.mutable.HashSet
-import scala.collection.mutable.ListBuffer
-
 object LoggerRateLimiter extends App {
   class Logger {
     val map = scala.collection.mutable.Map[String, Int]()
