@@ -28,7 +28,7 @@ class OrderPayment(payment: PaymentChannel, paymentValidation: PaymentValidation
   override def charge(list: List[PaymentTransaction]): Unit = {
     if (list.size > 1) {
       //list.map(paymentValidation.validate).map(payment.pay(_))
-      Try(paymentValidation.validateAll(list).map(payment.pay)) match {
+      Try(paymentValidation.validateAll(list).map(???)) match {
         case Success(s) => ???
         case Failure(e) => ???
       }

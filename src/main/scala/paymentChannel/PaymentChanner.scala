@@ -19,14 +19,14 @@ case object CreditCard extends IPaymentChannel {
 
 class PaymentChannel(list: List[IPaymentChannel]) {
 
-   def pay(transaction: PaymentTransaction): Boolean = {
+/*   def pay(transaction: PaymentTransaction): Boolean = {
     transaction.paymentMethodName match {
       case PaymentChannels.paypal => list.filter(_.channelId == 1).head.pay(transaction)
       case PaymentChannels.CreditCard => list.filter(_.channelId == 2).head.pay(transaction)
       case PaymentChannels.bank => list.filter(_.channelId == 3).head.pay(transaction)
     }
 
-  }
+  }*/
 
    def validation: Boolean = ???
 }
